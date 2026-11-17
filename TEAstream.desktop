@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=TEAstream
+Comment=Personal Cloud Multistream Relay Hub
+Exec=bash -c "cd $(dirname %k) && ./start-teastream.sh"
+Icon=video-display
+Terminal=false
+Type=Application
+Categories=AudioVideo;Video;Network;
+StartupNotify=true

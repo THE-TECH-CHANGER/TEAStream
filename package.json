@@ -1,0 +1,90 @@
+{
+  "name": "teastream",
+  "productName": "TEAstream",
+  "version": "1.2.0",
+  "description": "TEAstream — Self-hosted zero-lag multistream relay hub for Windows, macOS, Linux, and Cloud Web Dashboard",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "stop": "node server/stop.js",
+    "server": "node server/index.js",
+    "app": "electron desktop/main.js",
+    "dev": "node --watch server/index.js",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder -mwl"
+  },
+  "keywords": [
+    "teastream",
+    "multistream",
+    "rtmp",
+    "rtmps",
+    "twitch",
+    "youtube",
+    "kick",
+    "loco",
+    "rooter",
+    "nimotv",
+    "relay",
+    "zero-cpu"
+  ],
+  "author": "TEAstream",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-media-server": "^2.7.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.teastream.hub",
+    "productName": "TEAstream",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "desktop/**/*",
+      "server/**/*",
+      "public/**/*",
+      "data/config.example.json",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.video"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Video"
+    }
+  }
+}

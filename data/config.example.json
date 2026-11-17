@@ -1,0 +1,110 @@
+{
+  "server": {
+    "rtmpPort": 1935,
+    "httpPort": 8000,
+    "webPort": 3000,
+    "ingestKey": "cstream_live_demo",
+    "autoStartRelay": true
+  },
+  "destinations": [
+    {
+      "id": "youtube",
+      "name": "YouTube Live",
+      "icon": "youtube",
+      "color": "#FF0000",
+      "enabled": true,
+      "serverUrl": "rtmp://a.rtmp.youtube.com/live2",
+      "streamKey": "",
+      "guideUrl": "https://studio.youtube.com/channel/UC/livestreaming/dashboard",
+      "status": "idle"
+    },
+    {
+      "id": "kick",
+      "name": "Kick",
+      "icon": "kick",
+      "color": "#53FC18",
+      "enabled": true,
+      "serverUrl": "rtmps://fa723fc1b171.global-contribute.live-video.net:443/app",
+      "streamKey": "",
+      "guideUrl": "https://kick.com/dashboard/settings/stream",
+      "status": "idle"
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "icon": "twitch",
+      "color": "#9146FF",
+      "enabled": true,
+      "serverUrl": "rtmp://live.twitch.tv/app",
+      "streamKey": "",
+      "guideUrl": "https://dashboard.twitch.tv/settings/stream",
+      "status": "idle"
+    },
+    {
+      "id": "steam",
+      "name": "Steam TV",
+      "icon": "steam",
+      "color": "#1A9FFF",
+      "enabled": false,
+      "serverUrl": "rtmp://broadcast.steamcontent.com/broadcast",
+      "streamKey": "",
+      "guideUrl": "https://steamcommunity.com/broadcast/upload",
+      "status": "idle"
+    },
+    {
+      "id": "nimotv",
+      "name": "Nimo TV",
+      "icon": "nimotv",
+      "color": "#8A2BE2",
+      "enabled": true,
+      "serverUrl": "rtmp://alpush.rtmp.nimo.tv/live",
+      "streamKey": "",
+      "guideUrl": "https://creator.nimo.tv",
+      "status": "idle"
+    },
+    {
+      "id": "rooter",
+      "name": "Rooter",
+      "icon": "rooter",
+      "color": "#FF6B00",
+      "enabled": true,
+      "serverUrl": "rtmps://rtmp-mumbai-in.rooter.io:443/show",
+      "streamKey": "",
+      "guideUrl": "https://creator.rooter.gg",
+      "status": "idle"
+    },
+    {
+      "id": "xlive",
+      "name": "X (Twitter) Live",
+      "icon": "xlive",
+      "color": "#E7E9EA",
+      "enabled": false,
+      "serverUrl": "rtmp://va.pscp.tv:80/x",
+      "streamKey": "",
+      "guideUrl": "https://studio.twitter.com/producer",
+      "status": "idle"
+    },
+    {
+      "id": "loco",
+      "name": "Loco",
+      "icon": "loco",
+      "color": "#00F59B",
+      "enabled": true,
+      "serverUrl": "rtmps://a005fc16e50c.global-contribute.live-video.net:443/app",
+      "streamKey": "",
+      "guideUrl": "https://studio.loco.gg",
+      "status": "idle"
+    },
+    {
+      "id": "rumble",
+      "name": "Rumble",
+      "icon": "rumble",
+      "color": "#85C742",
+      "enabled": false,
+      "serverUrl": "rtmp://rtmp.rumble.com/live",
+      "streamKey": "",
+      "guideUrl": "https://rumble.com/live-stream-setup",
+      "status": "idle"
+    }
+  ]
+}

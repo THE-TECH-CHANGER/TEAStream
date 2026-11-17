@@ -1,0 +1,19 @@
+services:
+  teastream:
+    build: .
+    container_name: teastream_relay
+    restart: unless-stopped
+    ports:
+      - "1935:1935"   # RTMP Ingest from OBS Studio
+      - "3000:3000"   # Upstream-style Web Dashboard & Realtime Telemetry
+      - "8000:8000"   # HTTP-FLV Live Stream Preview
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
